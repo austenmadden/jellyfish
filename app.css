@@ -27,7 +27,6 @@ section {
   margin: auto;
   margin-top: 4em;
   max-width: 50em;
-  min-height: 15em;
 }
 
 #landing {
@@ -50,4 +49,52 @@ section {
   text-align: center;
   padding: 0.5em;
   margin: auto;
+}
+
+table {
+  text-align: center;
+  margin: 0 auto 0 auto;
+}
+
+tbody td {
+  padding: 0 5px 0 5px;
+  border: 1px black solid;
+}
+
+.gallery {
+  display: flex;
+}
+
+.gallery-item {
+  border-radius: 4px;
+  box-shadow: 0 0 2px #aaa;
+  max-width: 20em;
+  overflow: hidden;
+}
+
+.gallery-item p, .gallery-item h4 {
+  margin: 0;
+}
+
+.gallery-item img {
+  width: 100%;
+}
+
+.gallery-image {
+  height: 15em;
+  overflow: hidden;
+}
+
+.gallery-caption {
+  font-size: 0.75em;
+  padding: 0.5rem;
+  color: #aaa;
+}
+
+.gallery-description {
+  padding: 0.5rem;
+}
+
+.gallery-description p {
+  padding: 0.5em 0;
 }
