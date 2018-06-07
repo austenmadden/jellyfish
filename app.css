@@ -98,3 +98,11 @@ tbody td {
   padding: 0 5px 0 5px;
   border: 1px black solid;
 }
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+figure {
+  display: inline-block;
+}
