@@ -51,3 +51,13 @@ section {
   padding: 0.5em;
   margin: auto;
 }
+
+table {
+  text-align: center;
+  margin: 0 auto 0 auto;
+}
+
+tbody td {
+  padding: 0 5px 0 5px;
+  border: 1px black solid;
+}
