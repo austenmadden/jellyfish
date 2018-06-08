@@ -109,3 +109,7 @@ img {
 figure {
   display: inline-block;
 }
+
+.table-image {
+  max-height: 200px;
+}
