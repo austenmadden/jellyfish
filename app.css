@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: arial, verdana, sans-serif;
+  font-family: 'Comic Sans MS', 'Comic Sans', arial, verdana, sans-serif;
   margin: 0;
 }
 
@@ -26,7 +26,15 @@ nav a {
 section {
   margin: auto;
   margin-top: 4em;
-  max-width: 50em;
+  max-width: 65em;
+}
+
+section h1 {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #f22), color-stop(10%, #f2f), color-stop(20%, #22f), color-stop(30%, #2ff), color-stop(40%, #2f2),color-stop(50%, #2f2), color-stop(60%, #ff2), color-stop(80%, #f22) );
+  /* background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) ); */
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 #landing {
