@@ -6,12 +6,12 @@
   <header>
     <nav>
       <ul>
-        <li><a href="https://git.innova-partners.com/pages/nparry/ErmahgerdErnermals/">Zoo Home</a></li>
         <li><a href="#gallery">Pics</a></li>
         <li><a href="#science">Science</a></li>
         <li><a href="#activity">Activity Corner</a></li>
         <li><a href="#diet">Diet</a></li>
         <li><a href="#funfact">Fun Facts</a></li>
+        <li><a href="#chat">Chat</a></li>
       </ul>
     </nav>
   </header>
@@ -267,6 +267,38 @@
 
       <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/J2ogakQM_so?rel=0&amp;controls=0&amp;showinfo=0&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </section>
+    <section>
+      <h1 id="chat">Chat</h1>
+      <textarea id="chatInput" rows="5" cols="33"></textarea>
+      <textarea id="chatOutput" rows="5" cols="33" readonly></textarea>
+      <button onclick="chat(event)">Chat!</button>
+    </section>
   </main>
+  <script>
+    function chat(e) {
+      console.log("here")
+      e.preventDefault()
+
+      const chatInput = document.getElementById('chatInput').value
+      const chatOutput = document.getElementById('chatOutput')
+      const url = 'https://worker-delicate-cherry-5855.austenmadden.workers.dev/'
+
+      fetch(url, {
+        method: 'POST',
+        body: JSON.stringify({ input: chatInput })
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+
+          return response.json();
+        })
+        .then((response) => {
+          chatOutput.value = response[0].response.response
+          chatOutput.focus()
+        });
+    }
+  </script>
 </body>
 </html>
