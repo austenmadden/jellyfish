@@ -7,6 +7,10 @@ body {
   margin: 0;
 }
 
+main {
+  margin-bottom: 4em
+}
+
 nav ul {
   display: flex;
   justify-content: space-around;
